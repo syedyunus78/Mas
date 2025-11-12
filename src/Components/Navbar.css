@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+/* =======================
+   Navbar Container
+======================= */
+.navbar {
+  width: 100% !important;
+  height: 120px !important;
+  background-color: transparent;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: fixed;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 999;
+  transition: all 0.4s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* =======================
+   Navbar Scroll Effect
+======================= */
+.navbar.navbar-scrolled {
+  background-color: #222222;
+  width: 100% !important;
+  height: 120px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* =======================
+   Logo
+======================= */
+.nav-left .logo-img {
+  width: 180px;
+  height: 160px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.navbar.navbar-scrolled .logo-img {
+  width: 150px;
+  height: 150px;
+  transform: scale(0.9);
+}
+
+/* =======================
+   Right Section
+======================= */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* =======================
+   Menu
+======================= */
+.nav-ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-ul li {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.nav-ul li a:hover {
+  color: #43c0e6;
+}
+
+.nav-ul li:hover {
+  color: #007bff;
+}
+
+/* Underline hover effect */
+.nav-ul li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.nav-ul li:hover::after {
+  width: 100%;
+}
+
+/* =======================
+   Contact Section
+======================= */
+.contact-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.circle-icon {
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.navbar.navbar-scrolled .circle-icon {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.circle-icon:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.help-text p {
+  font-size: 14px;
+  padding-bottom: 8px;
+  margin: 0;
+}
+
+.help-text p,
+.help-text h4 {
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+}
+
+.navbar.navbar-scrolled .help-text p,
+.navbar.navbar-scrolled .help-text h4 {
+  color: #f3f0f0;
+}
+
+/* =======================
+   Hamburger Icon
+======================= */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* =======================
+   Responsive Styles
+======================= */
+@media (max-width: 1024px) {
+  .nav-right {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-right {
+    position: fixed;
+    top: 120px;
+    right: -100%;
+    width: 250px;
+    height: calc(100% - 120px);
+    background-color: #222;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-right.mobile-active {
+    right: 0;
+  }
+
+  .nav-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-ul li {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .contact-section {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .help-text h4 {
+    font-size: 14px;
+  }
+
+  .circle-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
