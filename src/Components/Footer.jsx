@@ -70,17 +70,11 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="social-icons">
-  <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
-    <FaFacebookF />
-  </a>
-  <a href="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer">
-    <FaYoutube />
-  </a>
-  <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-    <FaWhatsapp />
-  </a>
-</div>
-
+              <a href="javascript:void(0)"><FaFacebookF /></a>
+              <a href="javascript:void(0)"><FaYoutube /></a>
+              <a href="javascript:void(0)"><FaWhatsapp /></a>
+            </div>
+          </div>
 
           {/* Quick Links */}
           <div className="footer-section">
