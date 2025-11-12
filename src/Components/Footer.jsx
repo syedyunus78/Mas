@@ -70,9 +70,9 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="social-icons">
-              <a href="javascript:void(0)"><FaFacebookF /></a>
-              <a href="javascript:void(0)"><FaYoutube /></a>
-              <a href="javascript:void(0)"><FaWhatsapp /></a>
+              <a ><FaFacebookF /></a>
+              <a ><FaYoutube /></a>
+              <a ><FaWhatsapp /></a>
             </div>
           </div>
 
