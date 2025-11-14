@@ -1,10 +1,50 @@
 import React from 'react'
+import { FaEnvelope, FaMapMarkerAlt, FaClock, FaPhoneAlt } from "react-icons/fa";
+
 
 const Contactuspage = () => {
   return (
-    <div className="contactuscontainer">
+    <>
+  <div className="contactuscontainer">
+    <p className="contactus-top-title">Get in touch</p>
+ 
+  <h4 className="contactus-title">Contact Us</h4>
+</div>
+
+<br/>
+<br/>
+      {/* 🔹 FOUR INFO CARDS */}
+      <div className="contact-info-cards">
+        <div className="info-card">
+          <FaEnvelope className="info-icon" />
+          <h4>Email</h4>
+          <p>mas@gmail.com</p>
+        </div>
+
+        <div className="info-card">
+          <FaMapMarkerAlt className="info-icon" />
+          <h4>Address</h4>
+          <p>Jeddah, Saudi Arabia</p>
+        </div>
+
+        <div className="info-card">
+          <FaClock className="info-icon" />
+          <h4>Timing</h4>
+          <p>9 AM – 6 PM</p>
+        </div>
+
+        <div className="info-card">
+          <FaPhoneAlt className="info-icon" />
+          <h4>Call Us</h4>
+          <p>+91 98765 4332</p>
+        </div>
+      </div>
+<br/>
+<br/>
+      {/* 🔹 FORM + MAP SECTION */}
       <div className="contact-content">
-        {/* Left side - Contact Form */}
+        
+        {/* Left - Form */}
         <div className="contact-form">
           <h2>Contact Us</h2>
           <form>
@@ -17,7 +57,7 @@ const Contactuspage = () => {
           </form>
         </div>
 
-        {/* Right side - Map */}
+        {/* Right - Map */}
         <div className="contact-map">
           <iframe
             title="Jeddah Tower Map"
@@ -25,13 +65,12 @@ const Contactuspage = () => {
             width="100%"
             height="100%"
             style={{ border: 0 }}
-            allowFullScreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+
       </div>
-    </div>
+    </>
   )
 }
 

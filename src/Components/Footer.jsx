@@ -92,7 +92,11 @@ const Footer = () => {
             <h4>Contact</h4>
             <p>📍 Jeddah, Saudi Arabia</p>
             <p>📞 +91 98765 43210</p>
-            <input type="email" placeholder="Enter your email" className="email-input" />
+            <br/>
+            <div className="email-box">
+  <input type="email" placeholder="Enter your email" className="email-input" />
+  <button className="email-send-btn">Send</button>
+</div>
           </div>
 
         </div>

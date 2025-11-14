@@ -13,11 +13,11 @@ import img5 from "../images/mecca and madina image.jpeg";
 
 const About = () => {
   const aboutCards = [
-    { title: "Car Rental", img: img1, price: "1" },
-    { title: "Driver Services", img: img2, price: "2" },
-    { title: "Airport Transfer", img: img3, price: "3" },
-    { title: "Fleet Leasing", img: img4, price: "4" },
-    { title: "Mecca & Medina", img: img5, price: "5" },
+    { title:" Car Rental", img: img1, price: "1" },
+    { title: " Driver Services", img: img2, price: "2" },
+    { title: " Airport Transfer", img: img3, price: "3" },
+    { title: " Fleet Leasing", img: img4, price: "4" },
+    { title: " Mecca & Medina", img: img5, price: "5" },
   ];
 
   return (
@@ -36,20 +36,20 @@ const About = () => {
         loop={true}
         breakpoints={{
           0: {
-            slidesPerView: 1,
-            spaceBetween: 20,
+            slidesPerView: 1.5,
+            spaceBetween: 17,
           },
           480: {
-            slidesPerView: 1.3,
-            spaceBetween: 20,
+            slidesPerView: 1.8,
+            spaceBetween: 18,
           },
           768: {
-            slidesPerView: 2,
-            spaceBetween: 25,
+            slidesPerView: 2.5,
+            spaceBetween: 22,
           },
           1024: {
-            slidesPerView: 2.8,
-            spaceBetween: 30,
+            slidesPerView: 3,
+            spaceBetween: 28,
           },
         }}
       >
@@ -57,9 +57,9 @@ const About = () => {
           <SwiperSlide key={index}>
             <div className="card">
               <div className="cardimg">
-                <img src={card.img} alt={card.title} />
+                <img src={card.img} alt={ card.title} />
                 <div className="text-overlay">
-                  <p>{card.title}</p>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;{card.title}</p>
                 </div>
               </div>
               <div className="tag">

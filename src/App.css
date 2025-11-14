@@ -202,35 +202,120 @@ body {
     height: 12px;
   }
 }
-
-/* Container for Contact Us Section */
+/* ================================
+   CONTACT US MAIN CONTAINER
+=================================== */
 .contactuscontainer {
-  background: url('../src/images/3.airport transfer.webp') center center / cover no-repeat fixed;
-  min-height: 900px;
+  background: url('../src/images/4.fleet\ Leasing.webp') center center / cover no-repeat;
+  background-attachment: scroll;      /* removes blur issue from fixed */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+
+  min-height: 1100px;
+  width: 100%;
+  
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;                 /* centers horizontally */
+  justify-content: center;             /* centers vertically */
+  
   padding: 50px 20px;
   box-sizing: border-box;
-  padding-top: -230px;
+  text-align: center;
+}
+
+/* CONTACT US heading */
+.contactus-top-title {
+   font-size: 20px;
+  font-weight: 500;
+  color: #007BFF;    /* blue color */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.contactus-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #e4e5e7;    /* blue color */
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 
-/* Inner content - flex left form, right map */
+/* ================================
+   4 INFO CARDS SECTION
+=================================== */
+.contact-info-cards {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;     /* centers all cards */
+  align-items: center;         /* vertical center */
+  gap: 20px;                   /* spacing between cards */
+  margin: 0 auto 40px auto;    /* centers container itself */
+}
+
+.info-card {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.info-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+  color: #00bfff;
+}
+
+.info-card h4 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #ff6600;
+}
+
+.info-card p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Responsive for small screens */
+@media (max-width: 900px) {
+  .contact-info-cards {
+    flex-direction: column;
+  }
+}
+
+/* ================================
+   CONTACT FORM + MAP WRAPPER
+=================================== */
 .contact-content {
   display: flex;
   width: 90%;
   max-width: 1200px;
-  gap: 30px; /* gap between form and map */
+  gap: 30px;
   border-radius: 15px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.05); /* subtle overlay to distinguish content */
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
 }
 
-/* Left - Contact Form */
+/* ================================
+   LEFT SIDE - FORM
+=================================== */
 .contact-form {
   flex: 1;
-  background-color: #1B1B1B; /* dark background */
+  background-color: #1B1B1B;
   padding: 40px;
   border-radius: 15px;
   display: flex;
@@ -246,16 +331,15 @@ body {
   font-weight: 600;
 }
 
-/* Form layout */
 .contact-form form {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* space between fields */
+  gap: 20px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%; /* full row */
+  width: 100%;
   padding: 12px 15px;
   border: 1px solid #444;
   border-radius: 12px;
@@ -272,12 +356,12 @@ body {
   box-shadow: 0 0 8px #ff6600;
 }
 
-/* Button styling */
+/* Submit Button */
 .contact-form button {
-  width: auto; /* do not stretch */
-  align-self: flex-start; /* left align */
+  width: auto;
+  align-self: flex-start;
   padding: 12px 25px;
-  background-color: #00bfff; /* sky blue */
+  background-color: #00bfff;
   color: white;
   border: none;
   border-radius: 12px;
@@ -288,27 +372,30 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #009acd; /* darker blue on hover */
+  background-color: #009acd;
 }
 
-/* Right - Map */
+/* ================================
+   RIGHT SIDE - MAP
+=================================== */
 .contact-map {
   flex: 1;
   min-height: 100%;
   border-radius: 15px;
   overflow: hidden;
+  background-color: rgb(27, 27, 27);
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  background-color: rgb(27, 27, 27); /* dark background */
 }
 
 .contact-map iframe {
   width: 100%;
   height: 100%;
   border: 0;
-  border-radius: 15px;
 }
 
-/* Responsive - stack form and map on smaller screens */
+/* ================================
+   RESPONSIVE DESIGN
+=================================== */
 @media screen and (max-width: 900px) {
   .contact-content {
     flex-direction: column;
